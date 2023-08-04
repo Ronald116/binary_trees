@@ -59,11 +59,14 @@ int height(const binary_tree_t *tree);
 int is_bst(const binary_tree_t *tree, int min, int max);
 int is_avl_tree(const binary_tree_t *tree);
 avl_t *r_insert_node(avl_t **tree, avl_t *parent, avl_t **new, int nval);
-bst_t *bst_remove(bst_t *root, int value);
+/*bst_t *bst_remove(bst_t *root, int value);*/
 int remove_type(bst_t *root);
 int successor(bst_t *node);
 void bal(avl_t **tree);
 void sata_helper(avl_t **root, int *array, size_t lo, size_t hi);
+int btih_helper(const binary_tree_t *tree);
+/*int binary_tree_is_complete(const binary_tree_t *tree);*/
+int btic_helper(const binary_tree_t *tree, size_t index, size_t size);
 
 /*Prototype functions*/
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
