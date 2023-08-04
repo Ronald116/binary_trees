@@ -67,7 +67,11 @@ void sata_helper(avl_t **root, int *array, size_t lo, size_t hi);
 int btih_helper(const binary_tree_t *tree);
 /*int binary_tree_is_complete(const binary_tree_t *tree);*/
 int btic_helper(const binary_tree_t *tree, size_t index, size_t size);
-
+size_t tree_height(const heap_t *tree);
+size_t tree_size_h(const binary_tree_t *tree);
+void _preorder(heap_t *tree, heap_t **node, size_t height);
+void heapify(heap_t *root);
+size_t tree_size(const binary_tree_t *tree);
 
 /*Prototype functions*/
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
