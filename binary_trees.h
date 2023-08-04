@@ -54,6 +54,10 @@ typedef struct queue_s
 queue_t *create_queue();
 void enqueue(queue_t *queue, binary_tree_t *node);
 binary_tree_t *dequeue(queue_t *queue);
+int max(int a, int b);
+int height(const binary_tree_t *tree);
+int is_bst(const binary_tree_t *tree, int min, int max);
+int is_avl_tree(const binary_tree_t *tree);
 
 /*Prototype functions*/
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
