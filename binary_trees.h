@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/*struct definitions*/
 /*basic binary tree*/
 /**
  * struct binary_tree_s - Binary tree node
@@ -36,6 +37,23 @@ typedef struct binary_tree_s heap_t;
 /*binary_tree_print*/
 void binary_tree_print(const binary_tree_t *tree);
 
+/*struct for queues*/
+typedef struct queue_node_s
+{
+    binary_tree_t *node;
+    struct  queue_node_s *next;
+} queue_node_t;
+
+typedef struct queue_s
+{
+    queue_node_t *front;
+    queue_node_t *rear;
+} queue_t;
+
+/*helper functions*/
+queue_t *create_queue();
+void enqueue(queue_t *queue, binary_tree_t *node);
+binary_tree_t *dequeue(queue_t *queue);
 
 /*Prototype functions*/
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
